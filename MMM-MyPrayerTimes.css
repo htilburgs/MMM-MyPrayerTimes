@@ -1,0 +1,49 @@
+/*
+//-------------------------------------------
+MMM-MyPrayerTime - CSS
+Copyright (C) 2019 - H. Tilburgs
+MIT License
+//-------------------------------------------
+Copy and paste any or all of these css entries into your custom.css file inside your
+css folder. The functions are annotated to make things as easy as possible for you.
+Use any colors you want! Go to - "http://htmlcolorcodes.com/color-picker/"
+Pick your color, copy and paste the HEX number. Example - #62FF00 = bright green.
+*/
+ 
+.MMM-MyPrayerTime .header{
+  color: white;               /* Header color. Default is white. */
+  text-align: left;           /* Align header text. (left, center, right) */
+}
+
+.MMM-MyPrayerTime .Fajr {
+  color: white;               /* Color the Fajr. Default is white. */
+}
+
+.MMM-MyPrayerTime. .Sunrise {
+  color: white;               /* Color the Sunrise. Default is white. */
+}
+
+.MMM-MyPrayerTime .Dhuhr {
+  color: white;               /* Color the Dhuhr. Default is white. */
+}
+
+.MMM-MyPrayerTime .Asr {
+  color: white;               /* Color the Asr. Default is white. */
+}
+
+.MMM-MyPrayerTime .Sunset {
+  color: white;               /* Color the Sunset. Default is white. */
+}
+
+.MMM-MyPrayerTime .Maghrib {
+  color: white;               /* CColor the Maghrib. Default is white. */
+}
+
+.MMM-MyPrayerTime .Isha {
+  color: white;               /* Color the Isha. Default is white. */
+}
+
+.MMM-MyPrayerTime .Midnight {
+  color: white;               /* Color the Midnight. Default is white. */
+}
+

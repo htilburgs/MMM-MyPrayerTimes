@@ -1,0 +1,19 @@
+{
+  "name": "MMM-MyPrayerTimes",
+  "version": "0.0.1",
+  "description": "MagicMirror module for current Islamic Prayer Time",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/htilburgs/MMM-MyPrayerTimes.git"
+  },
+  "main": "MMM-MyPrayerTimes.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Harm Tilburgs",
+  "license": "MIT",
+  "dependencies": {
+    "moment": "^2.24.0",
+    "moment-timezone": "^0.5.21"
+  } 
+}
