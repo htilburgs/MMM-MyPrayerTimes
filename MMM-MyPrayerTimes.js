@@ -1,6 +1,6 @@
 /*
 //-------------------------------------------
-MMM-MyPrayerTimes
+MMM-MyPrayerTime
 Copyright (C) 2019 - H. Tilburgs
 MIT License
 //-------------------------------------------
@@ -83,17 +83,19 @@ Module.register('MMM-MyPrayerTimes', {
 		FajrRow.className = "small fajr-row";
 		
 		var FajrTextCell = document.createElement("td");
+		FajrTextCell.className = "fajr-text";
 		FajrTextCell.innerHTML = "Fajr";
 		FajrRow.appendChild(FajrTextCell);
 		table.appendChild(FajrRow);
 		
 		var FajrTimeCell = document.createElement("td");
-		FajrTimeCell.className = "bright";
+		FajrTimeCell.className = "fajr-time bright";
 		FajrTimeCell.innerHTML = MPT.Fajr;
 		FajrRow.appendChild(FajrTimeCell);
 		table.appendChild(FajrRow);
 		
 		var FajrArabCell = document.createElement("td");
+		FajrArabCell.className = "fajr-arab";
 		FajrArabCell.innerHTML = "الفجر";
 		FajrRow.appendChild(FajrArabCell);
 		table.appendChild(FajrRow);
@@ -104,17 +106,19 @@ Module.register('MMM-MyPrayerTimes', {
 			SunriseRow.className = "small sunrise-row";
 
 			var SunriseTextCell = document.createElement("td");
+			SunriseTextCell.className = "sunrise-text";
 			SunriseTextCell.innerHTML = "Sunrise";
 			SunriseRow.appendChild(SunriseTextCell);
 			table.appendChild(SunriseRow);
 
 			var SunriseTimeCell = document.createElement("td");
-			SunriseTimeCell.className = "bright";
+			SunriseTimeCell.className = "sunrise-time bright";
 			SunriseTimeCell.innerHTML = MPT.Sunrise;
 			SunriseRow.appendChild(SunriseTimeCell);
 			table.appendChild(SunriseRow);
 
 			var SunriseArabCell = document.createElement("td");
+			SunriseArabCell.className = "sunrise-arab";
 			SunriseArabCell.innerHTML = "شروق الشمس";
 			SunriseRow.appendChild(SunriseArabCell);
 			table.appendChild(SunriseRow);
@@ -125,17 +129,19 @@ Module.register('MMM-MyPrayerTimes', {
 		DhuhrRow.className = "small dhuhr-row";		
 		
 		var DhuhrTextCell = document.createElement("td");
+		DhuhrTextCell.className = "dhuhr-text";
 		DhuhrTextCell.innerHTML = "Dhuhr";
 		DhuhrRow.appendChild(DhuhrTextCell);
 		table.appendChild(DhuhrRow);
 		
 		var DhuhrTimeCell = document.createElement("td");
-		DhuhrTimeCell.className = "bright";
+		DhuhrTimeCell.className = "dhuhr-time bright";
 		DhuhrTimeCell.innerHTML = MPT.Dhuhr;
 		DhuhrRow.appendChild(DhuhrTimeCell);
 		table.appendChild(DhuhrRow);
 		
 		var DhuhrArabCell = document.createElement("td");
+		DhuhrArabCell.className = "dhuhr-arab";
 		DhuhrArabCell.innerHTML = "الظهر";
 		DhuhrRow.appendChild(DhuhrArabCell);
 		table.appendChild(DhuhrRow);
@@ -145,17 +151,19 @@ Module.register('MMM-MyPrayerTimes', {
 		AsrRow.className = "small asr-row";		
 		
 		var AsrTextCell = document.createElement("td");
+		AsrTextCell.className = "asr-text";
 		AsrTextCell.innerHTML = "Asr";
 		AsrRow.appendChild(AsrTextCell);
 		table.appendChild(AsrRow);
 		
 		var AsrTimeCell = document.createElement("td");
-		AsrTimeCell.className = "bright";
+		AsrTimeCell.className = "asr-time bright";
 		AsrTimeCell.innerHTML = MPT.Asr;
 		AsrRow.appendChild(AsrTimeCell);
 		table.appendChild(AsrRow);
 		
 		var AsrArabCell = document.createElement("td");
+		AsrArabCell.className = "asr-arab";
 		AsrArabCell.innerHTML = "العصر";
 		AsrRow.appendChild(AsrArabCell);
 		table.appendChild(AsrRow);
@@ -166,17 +174,19 @@ Module.register('MMM-MyPrayerTimes', {
 			FajrRow.className = "small sunset-row";		
 
 			var SunsetTextCell = document.createElement("td");
+			SunsetTextCell.className = "sunset-text";
 			SunsetTextCell.innerHTML = "Sunset";
 			SunsetRow.appendChild(SunsetTextCell);
 			table.appendChild(SunsetRow);
 
 			var SunsetTimeCell = document.createElement("td");
-			SunsetTimeCell.className= "bright";
+			SunsetTimeCell.className= "sunset-time bright";
 			SunsetTimeCell.innerHTML = MPT.Sunset;
 			SunsetRow.appendChild(SunsetTimeCell);
 			table.appendChild(SunsetRow);
 
 			var SunsetArabCell = document.createElement("td");
+			SunsetArabCell.className = "sunset-arab";
 			SunsetArabCell.innerHTML = "غروب الشمس";
 			SunsetRow.appendChild(SunsetArabCell);
 			table.appendChild(SunsetRow);
@@ -187,17 +197,19 @@ Module.register('MMM-MyPrayerTimes', {
 		MaghribRow.className = "small maghrib-row";		
 		
 		var MaghribTextCell = document.createElement("td");
+		MaghribTextCell.className = "maghrib-text";
 		MaghribTextCell.innerHTML = "Maghrib";
 		MaghribRow.appendChild(MaghribTextCell);
 		table.appendChild(MaghribRow);
 		
 		var MaghribTimeCell = document.createElement("td");
-		MaghribTimeCell.className = "bright";
+		MaghribTimeCell.className = "maghrib-time bright";
 		MaghribTimeCell.innerHTML = MPT.Maghrib;
 		MaghribRow.appendChild(MaghribTimeCell);
 		table.appendChild(MaghribRow);
 		
 		var MaghribArabCell = document.createElement("td");
+		MaghribArabCell.className = "maghrib-arab";
 		MaghribArabCell.innerHTML = "المغرب";
 		MaghribRow.appendChild(MaghribArabCell);
 		table.appendChild(MaghribRow);
@@ -207,17 +219,19 @@ Module.register('MMM-MyPrayerTimes', {
 		IshaRow.className = "small isha-row";
 		
 		var IshaTextCell = document.createElement("td");
+		IshaTextCell.className = "isha-text";
 		IshaTextCell.innerHTML = "Isha";
 		IshaRow.appendChild(IshaTextCell);
 		table.appendChild(IshaRow);
 		
 		var IshaTimeCell = document.createElement("td");
-		IshaTimeCell.className = "bright";
+		IshaTimeCell.className = "isha-time bright";
 		IshaTimeCell.innerHTML = MPT.Isha;
 		IshaRow.appendChild(IshaTimeCell);
 		table.appendChild(IshaRow);
 		
 		var IshaArabCell = document.createElement("td");
+		IshaArabCell.className = "isha-arab";
 		IshaArabCell.innerHTML = "لعشاء";
 		IshaRow.appendChild(IshaArabCell);
 		table.appendChild(IshaRow);
@@ -228,17 +242,19 @@ Module.register('MMM-MyPrayerTimes', {
 			MidnightRow.className = "small midnight-row";		
 
 			var MidnightTextCell = document.createElement("td");
+			MidnightTextCell.className = "midnight-text";
 			MidnightTextCell.innerHTML = "Midnight";
 			MidnightRow.appendChild(MidnightTextCell);
 			table.appendChild(MidnightRow);
 
 			var MidnightTimeCell = document.createElement("td");
-			MidnightTimeCell.className = "bright";
+			MidnightTimeCell.className = "midnight-time bright";
 			MidnightTimeCell.innerHTML = MPT.Midnight;
 			MidnightRow.appendChild(MidnightTimeCell);
 			table.appendChild(MidnightRow);
 
 			var MidnightArabCell = document.createElement("td");
+			MidnightArabCell.className = "midnight-arab";
 			MidnightArabCell.innerHTML = "منتصف الليل";
 			MidnightRow.appendChild(MidnightArabCell);
 			table.appendChild(MidnightRow);
