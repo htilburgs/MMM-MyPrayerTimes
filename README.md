@@ -1,4 +1,4 @@
-# MMM-MyPrayerTimess
+# MMM-MyPrayerTimes
 MyPrayerTime provides a set of handy functions to calculate prayer times for any location around the world, based on a variety of calculation methods currently used in Muslim communities.
 
 ## Installation
@@ -27,7 +27,6 @@ Add the module to your modules array in your config.js.
 	  showSunrise: true,		// Display Sunrise
 	  showSunset: true,		// Display Sunset
 	  showMidnight: true,		// Display Midnight
-	  maxWidth: "250px",		// Max width of the wrapper
 	  }
 },
 ```
