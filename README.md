@@ -1,6 +1,8 @@
 # MMM-MyPrayerTimes
 MyPrayerTime provides a set of handy functions to calculate prayer times for any location around the world, based on a variety of calculation methods currently used in Muslim communities.
 
+![Screenshot](screenshot.png)
+
 ## Installation
 Clone this repository in your modules folder, and install dependencies:
 
