@@ -15,34 +15,98 @@ Pick your color, copy and paste the HEX number. Example - #62FF00 = bright green
   text-align: left;           /* Align header text. (left, center, right) */
 }
 
-.MMM-MyPrayerTimes .Fajr {
-  color: white;               /* Color the Fajr. Default is white. */
+.MMM-MyPrayerTimes .fajr-text {
+  text-align: left;
 }
 
-.MMM-MyPrayerTimes. .Sunrise {
-  color: white;               /* Color the Sunrise. Default is white. */
+.MMM-MyPrayerTimes .fajr-time {
+   text-align: center;
 }
 
-.MMM-MyPrayerTimes .Dhuhr {
-  color: white;               /* Color the Dhuhr. Default is white. */
+.MMM-MyPrayerTimes .fajr-arab {
+  text-align: right;
 }
 
-.MMM-MyPrayerTimes .Asr {
-  color: white;               /* Color the Asr. Default is white. */
+.MMM-MyPrayerTimes .sunrise-text {
+  text-align: left;
 }
 
-.MMM-MyPrayerTimes .Sunset {
-  color: white;               /* Color the Sunset. Default is white. */
+.MMM-MyPrayerTimes .sunrise-time {
+   text-align: center;
 }
 
-.MMM-MyPrayerTimes .Maghrib {
-  color: white;               /* CColor the Maghrib. Default is white. */
+.MMM-MyPrayerTimes .sunrise-arab {
+  text-align: right;
 }
 
-.MMM-MyPrayerTimes .Isha {
-  color: white;               /* Color the Isha. Default is white. */
+.MMM-MyPrayerTimes .dhuhr-text {
+  text-align: left;
 }
 
-.MMM-MyPrayerTimes .Midnight {
-  color: white;               /* Color the Midnight. Default is white. */
+.MMM-MyPrayerTimes .dhuhr-time {
+   text-align: center;
+}
+
+.MMM-MyPrayerTimes .dhuhr-arab {
+  text-align: right;
+}
+
+.MMM-MyPrayerTimes .asr-text {
+  text-align: left;
+}
+
+.MMM-MyPrayerTimes .asr-time {
+   text-align: center;
+}
+
+.MMM-MyPrayerTimes .asr-arab {
+  text-align: right;
+}
+
+.MMM-MyPrayerTimes .sunset-text {
+  text-align: left;
+}
+
+.MMM-MyPrayerTimes .sunset-time {
+   text-align: center;
+}
+
+.MMM-MyPrayerTimes .sunset-arab {
+  text-align: right;
+}
+
+.MMM-MyPrayerTimes .maghrib-text {
+  text-align: left;
+}
+
+.MMM-MyPrayerTimes .maghrib-time {
+   text-align: center;
+}
+
+.MMM-MyPrayerTimes .maghrib-arab {
+  text-align: right;
+}
+
+.MMM-MyPrayerTimes .isha-text {
+  text-align: left;
+}
+
+.MMM-MyPrayerTimes .isha-time {
+   text-align: center;
+}
+
+.MMM-MyPrayerTimes .isha-arab {
+  text-align: right;
+}
+
+.MMM-MyPrayerTimes .midnight-text {
+  text-align: left;
+}
+
+.MMM-MyPrayerTimes .midnight-time {
+   text-align: center;
+}
+
+.MMM-MyPrayerTimes .midnight-arab {
+  text-align: right;
 }
