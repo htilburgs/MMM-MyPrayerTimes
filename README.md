@@ -21,9 +21,9 @@ Add the module to your modules array in your config.js.
   position: 'top_left',
   header: 'My Prayer Times',
   config: {
-          mptLat: 51.508515,		// Replace with the latitude of your location
-	  mptLon: 0.1254872,		// Replace with the Longitude of your location
-	  mptMethode: 2,		// Which calculation methode is used, see options below
+          mptLat: null,			// Replace with the latitude of your location
+	  mptLon: null,			// Replace with the Longitude of your location
+	  mptMethode: 3,		// Which calculation methode is used, see options below
 	  showSunrise: true,		// Display Sunrise
 	  showSunset: true,		// Display Sunset
 	  showMidnight: true,		// Display Midnight
@@ -55,9 +55,9 @@ Here is the documentation of options for the modules configuration:
     <tr>
       <td><code>mptMethod</code></td>
       <td>Kind of calculation method to use<br /><br /><strong>Default: </strong>Number<br /><strong>Possible values:
-	0 - Shia Ithna-Ansari
-1 - University of Islamic Sciences, Karachi
-2 - Islamic Society of North America
+	      <li>0 - Shia Ithna-Ansari</li>
+	      <li>1 - University of Islamic Sciences, Karachi</li>
+	      <li>2 - Islamic Society of North America</li>
 3 - Muslim World League
 4 - Umm Al-Qura University, Makkah 
 5 - Egyptian General Authority of Survey
