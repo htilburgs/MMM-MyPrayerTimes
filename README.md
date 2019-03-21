@@ -1,5 +1,5 @@
 # MMM-MyPrayerTimes
-MyPrayerTime provides a set of handy functions to calculate prayer times for any location around the world, based on a variety of calculation methods currently used in Muslim communities.
+MyPrayerTimes is a simple Module, that calculates the prayer times for any location around the world, based on a variety of calculation methods currently used in Muslim communities using the Aladhan API
 
 ![Screenshot](screenshot.png)
 
