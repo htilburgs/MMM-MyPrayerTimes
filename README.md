@@ -19,16 +19,15 @@ Add the module to your modules array in your config.js.
 {
   module: 'MMM-MyPrayerTimes',
   position: 'top_left',
+  header: 'My Prayer Times',
   config: {
-          mptLat: 51.508515,		// Replace with the latitude of your location
-	  	mptLon: 0.1254872,			// Replace with the Longitude of your location
-	  	mptMethode: 2,				// Which calculation methode is used, see options below
-	  	showSunrise: true,			// Display Sunrise
-	  	showSunset: true,			// Display Sunset
-	  	showMidnight: true,			// Display Midnight
-	  	useHeader: true,			// Display header on the MagicMirror
-	  	header: 'My Prayer Times',	// The header to be displayed
-	  	maxWidth: "250px",			// Max width of the wrapper
+          mptLat: 51.508515,			// Replace with the latitude of your location
+	  	mptLon: 0.1254872,		// Replace with the Longitude of your location
+	  	mptMethode: 2,			// Which calculation methode is used, see options below
+	  	showSunrise: true,		// Display Sunrise
+	  	showSunset: true,		// Display Sunset
+	  	showMidnight: true,		// Display Midnight
+	  	maxWidth: "250px",		// Max width of the wrapper
 	  	}
 },
 ```
