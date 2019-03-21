@@ -70,6 +70,19 @@ Here is the documentation of options for the modules configuration:
 	  <li>13 - Diyanet İşleri Başkanlığı, Turkey</li>
 	  <li>99 - Custom. See https://aladhan.com/calculation-methods</li>
 	</strong></td>
+	</tr>
+    <tr>
+      <td><code>showSunrise</code></td>
+      <td>Shows Sunrise in the Prayer Times<br /><br /><strong>True / False</strong><br />Default: <code>true</code></td>
+    </tr>
+     <tr>
+      <td><code>showSunset</code></td>
+      <td>Shows Sunset in the Prayer Times<br /><br /><strong>True / False</strong><br />Default: <code>true</code></td>
+    </tr>
+    <tr>
+      <td><code>showMidnight</code></td>
+      <td>Shows Midnight in the Prayer Times<br /><br /><strong>True / False</strong><br />Default: <code>true</code></td>
+    </tr>    
 </tbody>
 </table>
 
