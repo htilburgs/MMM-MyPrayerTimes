@@ -26,7 +26,7 @@ Module.register('MMM-MyPrayerTimes', {
 		
 	// Define stylesheet
 	getStyles: function () {
-		return ["MMM-Test.css"];
+		return ["MMM-MyPrayerTimes.css"];
 	},  
 
 	// Define required scripts.
