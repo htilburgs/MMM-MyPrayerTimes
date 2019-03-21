@@ -21,14 +21,14 @@ Add the module to your modules array in your config.js.
   position: 'top_left',
   header: 'My Prayer Times',
   config: {
-          mptLat: 51.508515,			// Replace with the latitude of your location
-	  	mptLon: 0.1254872,		// Replace with the Longitude of your location
-	  	mptMethode: 2,			// Which calculation methode is used, see options below
-	  	showSunrise: true,		// Display Sunrise
-	  	showSunset: true,		// Display Sunset
-	  	showMidnight: true,		// Display Midnight
-	  	maxWidth: "250px",		// Max width of the wrapper
-	  	}
+          mptLat: 51.508515,		// Replace with the latitude of your location
+	  mptLon: 0.1254872,		// Replace with the Longitude of your location
+	  mptMethode: 2,		// Which calculation methode is used, see options below
+	  showSunrise: true,		// Display Sunrise
+	  showSunset: true,		// Display Sunset
+	  showMidnight: true,		// Display Midnight
+	  maxWidth: "250px",		// Max width of the wrapper
+	  }
 },
 ```
 To get your latitude and longitude, you can go to https://latitudelongitude.org
@@ -54,7 +54,22 @@ Here is the documentation of options for the modules configuration:
     </tr>
     <tr>
       <td><code>mptMethod</code></td>
-      <td>Kind of calculation method to use<br /><br /><strong>Default: </strong>Number<br /><strong>Possible values: </strong></td>
+      <td>Kind of calculation method to use<br /><br /><strong>Default: </strong>Number<br /><strong>Possible values:
+	0 - Shia Ithna-Ansari
+1 - University of Islamic Sciences, Karachi
+2 - Islamic Society of North America
+3 - Muslim World League
+4 - Umm Al-Qura University, Makkah 
+5 - Egyptian General Authority of Survey
+7 - Institute of Geophysics, University of Tehran
+8 - Gulf Region
+9 - Kuwait
+10 - Qatar
+11 - Majlis Ugama Islam Singapura, Singapore
+12 - Union Organization islamic de France
+13 - Diyanet İşleri Başkanlığı, Turkey
+99 - Custom. See https://aladhan.com/calculation-methods      
+	</strong></td>
 </tbody>
 </table>
 
