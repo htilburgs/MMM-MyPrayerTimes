@@ -54,21 +54,21 @@ Here is the documentation of options for the modules configuration:
     </tr>
     <tr>
       <td><code>mptMethod</code></td>
-      <td>Kind of calculation method to use<br /><br /><strong>Default: </strong>Number<br /><strong>Possible values:
-	      <li>0 - Shia Ithna-Ansari</li>
-	      <li>1 - University of Islamic Sciences, Karachi</li>
-	      <li>2 - Islamic Society of North America</li>
-3 - Muslim World League
-4 - Umm Al-Qura University, Makkah 
-5 - Egyptian General Authority of Survey
-7 - Institute of Geophysics, University of Tehran
-8 - Gulf Region
-9 - Kuwait
-10 - Qatar
-11 - Majlis Ugama Islam Singapura, Singapore
-12 - Union Organization islamic de France
-13 - Diyanet İşleri Başkanlığı, Turkey
-99 - Custom. See https://aladhan.com/calculation-methods      
+      <td>Kind of calculation method to use<br /><br /><strong>Default: </strong>Number<br /></strong>Possible values:
+	  <li>0 - Shia Ithna-Ansari</li>
+	  <li>1 - University of Islamic Sciences, Karachi</li>
+	  <li>2 - Islamic Society of North America</li>
+	  <li>3 - Muslim World League</li>
+	  <li>4 - Umm Al-Qura University, Makkah</li>
+	  <li>5 - Egyptian General Authority of Survey</li>
+	  <li>7 - Institute of Geophysics, University of Tehran</li>
+	  <li>8 - Gulf Region</li>
+	  <li>9 - Kuwait</li>
+	  <li>10 - Qatar</li>
+	  <li>11 - Majlis Ugama Islam Singapura, Singapore</li>
+	  <li>12 - Union Organization islamic de France</li>
+	  <li>13 - Diyanet İşleri Başkanlığı, Turkey</li>
+	  <li>99 - Custom. See https://aladhan.com/calculation-methods</li>
 	</strong></td>
 </tbody>
 </table>
