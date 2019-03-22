@@ -61,7 +61,7 @@ Module.register('MMM-MyPrayerTimes', {
 		
 		// creating the table
 		var table = document.createElement("table");
-		table.className = "mpt-text";
+		table.className = "small";
 		
 		// creating the wrapper
 		var wrapper = document.createElement("div");
@@ -80,7 +80,7 @@ Module.register('MMM-MyPrayerTimes', {
 		// creating the tablerows
 		// Fajr
 		var FajrRow = document.createElement("tr")
-		FajrRow.className = "mpt-text fajr-row";
+		FajrRow.className = "fajr-row";
 		
 		var FajrTextCell = document.createElement("td");
 		FajrTextCell.className = "fajr-text";
@@ -103,7 +103,7 @@ Module.register('MMM-MyPrayerTimes', {
 		// Sunrise
 		if (this.config.showSunrise != false) {
 			var SunriseRow = document.createElement("tr")
-			SunriseRow.className = "mpt-text sunrise-row";
+			SunriseRow.className = "sunrise-row";
 
 			var SunriseTextCell = document.createElement("td");
 			SunriseTextCell.className = "sunrise-text";
@@ -126,7 +126,7 @@ Module.register('MMM-MyPrayerTimes', {
 		
 		//Dhuhr
 		var DhuhrRow = document.createElement("tr")
-		DhuhrRow.className = "mpt-text dhuhr-row";		
+		DhuhrRow.className = "dhuhr-row";		
 		
 		var DhuhrTextCell = document.createElement("td");
 		DhuhrTextCell.className = "dhuhr-text";
@@ -148,7 +148,7 @@ Module.register('MMM-MyPrayerTimes', {
 		
 		//Asr
 		var AsrRow = document.createElement("tr")
-		AsrRow.className = "mpt-text asr-row";		
+		AsrRow.className = "asr-row";		
 		
 		var AsrTextCell = document.createElement("td");
 		AsrTextCell.className = "asr-text";
@@ -171,7 +171,7 @@ Module.register('MMM-MyPrayerTimes', {
 		//Sunset
 		if (this.config.showSunset != false) {		
 			var SunsetRow = document.createElement("tr")
-			FajrRow.className = "mpt-text sunset-row";		
+			FajrRow.className = "sunset-row";		
 
 			var SunsetTextCell = document.createElement("td");
 			SunsetTextCell.className = "sunset-text";
@@ -194,7 +194,7 @@ Module.register('MMM-MyPrayerTimes', {
 		
 		//Maghrib
 		var MaghribRow = document.createElement("tr")
-		MaghribRow.className = "mpt-text maghrib-row";		
+		MaghribRow.className = "maghrib-row";		
 		
 		var MaghribTextCell = document.createElement("td");
 		MaghribTextCell.className = "maghrib-text";
@@ -216,7 +216,7 @@ Module.register('MMM-MyPrayerTimes', {
 		
 		//Isha
 		var IshaRow = document.createElement("tr")
-		IshaRow.className = "mpt-text isha-row";
+		IshaRow.className = "isha-row";
 		
 		var IshaTextCell = document.createElement("td");
 		IshaTextCell.className = "isha-text";
@@ -239,7 +239,7 @@ Module.register('MMM-MyPrayerTimes', {
 		//Midnight
 		if (this.config.showMidnight != false) {		
 			var MidnightRow = document.createElement("tr")
-			MidnightRow.className = "mpt-text midnight-row";		
+			MidnightRow.className = "midnight-row";		
 
 			var MidnightTextCell = document.createElement("td");
 			MidnightTextCell.className = "midnight-text";
