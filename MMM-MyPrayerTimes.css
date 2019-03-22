@@ -9,11 +9,6 @@ css folder. The functions are annotated to make things as easy as possible for y
 Use any colors you want! Go to - "http://htmlcolorcodes.com/color-picker/"
 Pick your color, copy and paste the HEX number. Example - #62FF00 = bright green.
 */
- 
-.mpt-text {
-  font-size: 20px;
-  line-height: 25px;
-}
 
 .MMM-MyPrayerTimes .header{
   color: white;               /* Header color. Default is white. */
