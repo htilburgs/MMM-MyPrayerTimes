@@ -10,6 +10,11 @@ Use any colors you want! Go to - "http://htmlcolorcodes.com/color-picker/"
 Pick your color, copy and paste the HEX number. Example - #62FF00 = bright green.
 */
  
+.small {
+  font-size: 25px;
+  line-height: 25px;
+}
+
 .MMM-MyPrayerTimes .header{
   color: white;               /* Header color. Default is white. */
   text-align: left;           /* Align header text. (left, center, right) */
