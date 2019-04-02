@@ -13,10 +13,11 @@ Module.register('MMM-MyPrayerTimes', {
 		date: new Date(),			// Today
 		mptLat: null,				// = Latitude
 		mptLon: null, 				// = Longitude
-		mptMethod: null, 			// Calculation Method - Default 2: MuslimWorldLeague
+		mptMethod: null, 			// Calculation Method - Default 3: MuslimWorldLeague
 		showSunrise: true,			// Display Sunrise, false if you want to hide
 		showSunset: true,			// Display Sunset, false if you want to hide
 		showMidnight: true,			// Display Midnight, false if you want to hide
+		show24Clock: true,			// Default display 24hour clock
 		maxWidth: "500px",			// Max width wrapper
 		animationSpeed: 1000, 			// fade in and out speed
 		initialLoadDelay: 1000,
@@ -40,6 +41,18 @@ Module.register('MMM-MyPrayerTimes', {
 		// Therefor we can just return false. Otherwise we should have returned a dictionary.
 		// If you're trying to build your own module including translations, check out the documentation.
 		return false;
+	},
+	
+	convertTime: function tConvert (time) {
+  	// Check correct time format and split into components
+  	time = time.toString ().match (/^([01]\d|2[0-3])(:)([0-5]\d)(:[0-5]\d)?$/) || [time];
+
+  	if (time.length > 1) { // If time format correct
+    	time = time.slice (1);  // Remove full string match value
+    	time[5] = +time[0] < 12 ? 'AM' : 'PM'; // Set AM/PM
+    	time[0] = +time[0] % 12 || 12; // Adjust hours
+  		}
+  	return time.join (''); // return adjusted time or original string
 	},
 	
 	start: function() {
@@ -85,7 +98,12 @@ Module.register('MMM-MyPrayerTimes', {
 		
 		var FajrTimeCell = document.createElement("td");
 		FajrTimeCell.className = "fajr-time bright";
-		FajrTimeCell.innerHTML = MPT.Fajr;
+		if (this.config.show24Clock != false) {
+			FajrTimeCell.innerHTML = MPT.Fajr;
+			}
+			else {
+			FajrTimeCell.innerHTML = convertTime(MPT.Fajr);
+			}
 		FajrRow.appendChild(FajrTimeCell);
 		table.appendChild(FajrRow);
 		
