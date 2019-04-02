@@ -29,6 +29,7 @@ Add the module to your modules array in your config.js.
 	  showSunrise: true,		// Display Sunrise
 	  showSunset: true,		// Display Sunset
 	  showMidnight: true,		// Display Midnight
+	  show24Clock: true,		// Default display 24hour clock -> false is 12hour (AM/PM) clock
 	  }
 },
 ```

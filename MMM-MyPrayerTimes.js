@@ -13,10 +13,11 @@ Module.register('MMM-MyPrayerTimes', {
 		date: new Date(),			// Today
 		mptLat: null,				// = Latitude
 		mptLon: null, 				// = Longitude
-		mptMethod: null, 			// Calculation Method - Default 2: MuslimWorldLeague
+		mptMethod: null, 			// Calculation Method - Default 3: MuslimWorldLeague
 		showSunrise: true,			// Display Sunrise, false if you want to hide
 		showSunset: true,			// Display Sunset, false if you want to hide
 		showMidnight: true,			// Display Midnight, false if you want to hide
+		show24Clock: true,			// Default display 24hour clock
 		maxWidth: "500px",			// Max width wrapper
 		animationSpeed: 1000, 			// fade in and out speed
 		initialLoadDelay: 1000,
@@ -40,6 +41,18 @@ Module.register('MMM-MyPrayerTimes', {
 		// Therefor we can just return false. Otherwise we should have returned a dictionary.
 		// If you're trying to build your own module including translations, check out the documentation.
 		return false;
+	},
+	
+	convert24Time: function (time) {
+		// Check correct time format and split into components
+		time = time.toString ().match (/^([01]\d|2[0-3])(:)([0-5]\d)(:[0-5]\d)?$/) || [time];
+
+		if (time.length > 1) { // If time format correct
+		time = time.slice (1);  // Remove full string match value
+		time[5] = +time[0] < 12 ? ' AM' : ' PM'; // Set AM/PM
+		time[0] = +time[0] % 12 || 12; // Adjust hours
+			}
+		return time.join (''); // return adjusted time or original string
 	},
 	
 	start: function() {
@@ -85,7 +98,7 @@ Module.register('MMM-MyPrayerTimes', {
 		
 		var FajrTimeCell = document.createElement("td");
 		FajrTimeCell.className = "fajr-time bright";
-		FajrTimeCell.innerHTML = MPT.Fajr;
+		FajrTimeCell.innerHTML = this.config.show24Clock == false ? this.convert24Time(MPT.Fajr) : MPT.Fajr;		
 		FajrRow.appendChild(FajrTimeCell);
 		table.appendChild(FajrRow);
 		
@@ -108,7 +121,7 @@ Module.register('MMM-MyPrayerTimes', {
 
 			var SunriseTimeCell = document.createElement("td");
 			SunriseTimeCell.className = "sunrise-time bright";
-			SunriseTimeCell.innerHTML = MPT.Sunrise;
+			SunriseTimeCell.innerHTML = this.config.show24Clock == false ? this.convert24Time(MPT.Sunrise) : MPT.Sunrise;
 			SunriseRow.appendChild(SunriseTimeCell);
 			table.appendChild(SunriseRow);
 
@@ -131,7 +144,7 @@ Module.register('MMM-MyPrayerTimes', {
 		
 		var DhuhrTimeCell = document.createElement("td");
 		DhuhrTimeCell.className = "dhuhr-time bright";
-		DhuhrTimeCell.innerHTML = MPT.Dhuhr;
+		DhuhrTimeCell.innerHTML = this.config.show24Clock == false ? this.convert24Time(MPT.Dhuhr) : MPT.Dhuhr;
 		DhuhrRow.appendChild(DhuhrTimeCell);
 		table.appendChild(DhuhrRow);
 		
@@ -153,7 +166,7 @@ Module.register('MMM-MyPrayerTimes', {
 		
 		var AsrTimeCell = document.createElement("td");
 		AsrTimeCell.className = "asr-time bright";
-		AsrTimeCell.innerHTML = MPT.Asr;
+		AsrTimeCell.innerHTML = this.config.show24Clock == false ? this.convert24Time(MPT.Asr) : MPT.Asr;
 		AsrRow.appendChild(AsrTimeCell);
 		table.appendChild(AsrRow);
 		
@@ -176,7 +189,7 @@ Module.register('MMM-MyPrayerTimes', {
 
 			var SunsetTimeCell = document.createElement("td");
 			SunsetTimeCell.className= "sunset-time bright";
-			SunsetTimeCell.innerHTML = MPT.Sunset;
+			SunsetTimeCell.innerHTML = this.config.show24Clock == false ? this.convert24Time(MPT.Sunset) : MPT.Sunset;
 			SunsetRow.appendChild(SunsetTimeCell);
 			table.appendChild(SunsetRow);
 
@@ -199,7 +212,7 @@ Module.register('MMM-MyPrayerTimes', {
 		
 		var MaghribTimeCell = document.createElement("td");
 		MaghribTimeCell.className = "maghrib-time bright";
-		MaghribTimeCell.innerHTML = MPT.Maghrib;
+		MaghribTimeCell.innerHTML = this.config.show24Clock == false ? this.convert24Time(MPT.Maghrib) : MPT.Maghrib;
 		MaghribRow.appendChild(MaghribTimeCell);
 		table.appendChild(MaghribRow);
 		
@@ -221,7 +234,7 @@ Module.register('MMM-MyPrayerTimes', {
 		
 		var IshaTimeCell = document.createElement("td");
 		IshaTimeCell.className = "isha-time bright";
-		IshaTimeCell.innerHTML = MPT.Isha;
+		IshaTimeCell.innerHTML = this.config.show24Clock == false ? this.convert24Time(MPT.Isha) : MPT.Isha;
 		IshaRow.appendChild(IshaTimeCell);
 		table.appendChild(IshaRow);
 		
@@ -244,7 +257,7 @@ Module.register('MMM-MyPrayerTimes', {
 
 			var MidnightTimeCell = document.createElement("td");
 			MidnightTimeCell.className = "midnight-time bright";
-			MidnightTimeCell.innerHTML = MPT.Midnight;
+			MidnightTimeCell.innerHTML = this.config.show24Clock == false ? this.convert24Time(MPT.Midnight) : MPT.Midnight;
 			MidnightRow.appendChild(MidnightTimeCell);
 			table.appendChild(MidnightRow);
 
