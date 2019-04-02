@@ -43,7 +43,7 @@ Module.register('MMM-MyPrayerTimes', {
 		return false;
 	},
 	
-	convertTime: function tConvert (time) {
+	convertTime: function (time) {
   	// Check correct time format and split into components
   	time = time.toString ().match (/^([01]\d|2[0-3])(:)([0-5]\d)(:[0-5]\d)?$/) || [time];
 
@@ -98,8 +98,9 @@ Module.register('MMM-MyPrayerTimes', {
 		
 		var FajrTimeCell = document.createElement("td");
 		FajrTimeCell.className = "fajr-time bright";
-//		FajrTimeCell.innerHTML = MPT.Fajr;
-		FajrTimeCell.innerHTML = (this.config.show24Clock != false ? moment(MPT.Fajr, ["HH:mm"]).format("h:mm A") : MPT.Fajr);		
+		FajrTimeCell.innerHTML = convertTime(MPT.Fajr);
+//		FajrTimeCell.innerHTML = (this.config.show24Clock != false ? moment(MPT.Fajr, ["HH:mm"]).format("h:mm A") : MPT.Fajr);		
+
 		FajrRow.appendChild(FajrTimeCell);
 		table.appendChild(FajrRow);
 		
