@@ -41,11 +41,6 @@ Module.register('MMM-MyPrayerTimes', {
 		// If you're trying to build your own module including translations, check out the documentation.
 		return false;
 	},
-			
-	// Override getHeader method.
- 	getHeader: function() {
- 		return this.config.header;
- 	},
 	
 	start: function() {
 		Log.info("Starting module: " + this.name);
