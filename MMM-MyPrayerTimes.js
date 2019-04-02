@@ -144,7 +144,7 @@ Module.register('MMM-MyPrayerTimes', {
 		
 		var DhuhrTimeCell = document.createElement("td");
 		DhuhrTimeCell.className = "dhuhr-time bright";
-		DhuhrTimeCell.innerHTML = this.config.show24Clock == false ? this.convert24Time(MPT.Duhr) : MPT.Dhuhr;
+		DhuhrTimeCell.innerHTML = this.config.show24Clock == false ? this.convert24Time(MPT.Dhuhr) : MPT.Dhuhr;
 		DhuhrRow.appendChild(DhuhrTimeCell);
 		table.appendChild(DhuhrRow);
 		
