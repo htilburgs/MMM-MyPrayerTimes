@@ -101,7 +101,7 @@ Module.register('MMM-MyPrayerTimes', {
 //		FajrTimeCell.innerHTML = this.convert24Time (MPT.Fajr);
 		
 //	const answer = x > 10 ? 'greater than 10' : 'less than 10';		
-		FajrTimeCell.innerHTML = this.config.show24Clock != false ? this.convert24Time(MPT.Fajr) : MPT.Fajr;		
+		FajrTimeCell.innerHTML = this.config.show24Clock == false ? this.convert24Time(MPT.Fajr) : MPT.Fajr;		
 
 		FajrRow.appendChild(FajrTimeCell);
 		table.appendChild(FajrRow);
