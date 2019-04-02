@@ -84,7 +84,11 @@ Here is the documentation of options for the modules configuration:
     <tr>
       <td><code>showMidnight</code></td>
       <td>Shows Midnight in the Prayer Times<br /><br /><strong>True / False</strong><br />Default: <code>true</code></td>
-    </tr>    
+    </tr>
+    <tr>
+      <td><code>show24Clock</code></td>
+      <td>Show Prayer Times in 12hour (AM/PM) or 24hour format<br /><br /><strong>True / False</strong><br />Default: <code>true</code></td>
+    </tr>
 </tbody>
 </table>
 
