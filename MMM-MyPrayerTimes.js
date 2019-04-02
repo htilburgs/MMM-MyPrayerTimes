@@ -98,12 +98,8 @@ Module.register('MMM-MyPrayerTimes', {
 		
 		var FajrTimeCell = document.createElement("td");
 		FajrTimeCell.className = "fajr-time bright";
-		if (this.config.show24Clock != false) {
-			FajrTimeCell.innerHTML = MPT.Fajr;
-			}
-			else {
-			FajrTimeCell.innerHTML = convertTime(MPT.Fajr);
-			}
+//		FajrTimeCell.innerHTML = MPT.Fajr;
+		FajrTimeCell.innerHTML = (this.config.show24Clock != false ? moment(MPT.Fajr, ["HH:mm"]).format("h:mm A") : MPT.Fajr);		
 		FajrRow.appendChild(FajrTimeCell);
 		table.appendChild(FajrRow);
 		
