@@ -17,6 +17,7 @@ Module.register('MMM-MyPrayerTimes', {
 		showSunrise: true,			// Display Sunrise, false if you want to hide
 		showSunset: true,			// Display Sunset, false if you want to hide
 		showMidnight: true,			// Display Midnight, false if you want to hide
+		showImsak: true,			// Display Imsak, false if you want to hide
 		show24Clock: true,			// Default display 24hour clock
 		maxWidth: "500px",			// Max width wrapper
 		animationSpeed: 1000, 			// fade in and out speed
@@ -86,6 +87,31 @@ Module.register('MMM-MyPrayerTimes', {
 		var MPT = this.MPT;
 
 		// creating the tablerows
+		
+		// Imsak
+		if (this.config.showImsak != false) {
+			var ImsakRow = document.createElement("tr")
+			ImsakRow.className = "imsak-row";
+
+			var ImsakTextCell = document.createElement("td");
+			ImsakTextCell.className = "imsak-text";
+			ImsakTextCell.innerHTML = "Imsak";
+			ImsakRow.appendChild(ImsakTextCell);
+			table.appendChild(ImsakRow);
+
+			var ImsakTimeCell = document.createElement("td");
+			ImsakTimeCell.className = "imsak-time bright";
+			ImsakTimeCell.innerHTML = this.config.show24Clock == false ? this.convert24Time(MPT.Imsak) : MPT.Imsak;
+			ImsakRow.appendChild(ImsakTimeCell);
+			table.appendChild(ImsakRow);
+
+			var ImsakArabCell = document.createElement("td");
+			ImsakArabCell.className = "imsak-arab";
+			ImsakArabCell.innerHTML = "الإمساك";
+			ImsakRow.appendChild(ImsakArabCell);
+			table.appendChild(ImsakRow);
+		}		
+		
 		// Fajr
 		var FajrRow = document.createElement("tr")
 		FajrRow.className = "fajr-row";
