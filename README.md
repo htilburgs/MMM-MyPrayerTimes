@@ -26,9 +26,10 @@ Add the module to your modules array in your config.js.
           mptLat: null,			// Replace with the latitude of your location
 	  mptLon: null,			// Replace with the Longitude of your location
 	  mptMethode: 3,		// Which calculation methode is used, see options below
-	  showSunrise: true,		// Display Sunrise
-	  showSunset: true,		// Display Sunset
-	  showMidnight: true,		// Display Midnight
+	  showSunrise: true,		// Display Sunrise, false if you want to hide
+	  showSunset: true,		// Display Sunset, false if you want to hide
+	  showMidnight: true,		// Display Midnight, false if you want to hide
+	  showImsak: true,		// Display Imsak, false if you want to hide
 	  show24Clock: true,		// Default display 24hour clock -> false is 12hour (AM/PM) clock
 	  }
 },
@@ -84,6 +85,10 @@ Here is the documentation of options for the modules configuration:
     <tr>
       <td><code>showMidnight</code></td>
       <td>Shows Midnight in the Prayer Times<br /><br /><strong>True / False</strong><br />Default: <code>true</code></td>
+    </tr>
+    <tr>
+      <td><code>showImsak</code></td>
+      <td>Shows Imsak in the Prayer Times<br /><br /><strong>True / False</strong><br />Default: <code>true</code></td>
     </tr>
     <tr>
       <td><code>show24Clock</code></td>
