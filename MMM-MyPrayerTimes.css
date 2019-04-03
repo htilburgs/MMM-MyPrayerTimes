@@ -15,6 +15,18 @@ Pick your color, copy and paste the HEX number. Example - #62FF00 = bright green
   text-align: left;           /* Align header text. (left, center, right) */
 }
 
+.MMM-MyPrayerTimes .imsak-text {
+  text-align: left;
+}
+
+.MMM-MyPrayerTimes .imsak-time {
+   text-align: center;
+}
+
+.MMM-MyPrayerTimes .imsak-arab {
+  text-align: right;
+}
+
 .MMM-MyPrayerTimes .fajr-text {
   text-align: left;
 }
