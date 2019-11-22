@@ -1,5 +1,17 @@
 # MMM-MyPrayerTimes
-MyPrayerTimes is a simple Module, that calculates the prayer times for any location around the world, based on a variety of calculation methods currently used in Muslim communities using the Aladhan API
+MyPrayerTimes is a simple Module, that calculates the prayer times for any location around the world, based on a variety of calculation methods currently used in Muslim communities using the Aladhan API. 
+
+The mathematical side of how the calculation should work is generally agreed upon in the Islamic world. Then again, this is an assumption I am making based on the number of countries that use the angle based calculation (and please note that I am not religiously or formally qualified and am providing this information with absolute humility in the hope that it may be useful). However, based on location, government preferences, and other 'factors', there are differences in the methods that produce, sometimes, a substantial variation in timings. If the mathematical side interests you, have a look at this excellent explanation: http://praytimes.org/wiki/Prayer_Times_Calculation.
+
+A calculation method is typically made up of the following:
+
+- The Fajr Angle
+- The Maghrib Angle or minutes after sunset that Maghrib should be
+- The Isha Angle or minutes after Maghrib that Isha should be
+
+The AlAdhan API has default values for all 3, and most methods only specifically specify Fajr and Isha.
+
+Most countries adhere to one of the above methods, and they then tune the timings further, by adding a few minutes here and there, based on criteria that may seem completely arbitrary. 
 
 ![Screenshot](screenshot.png)
 
@@ -96,6 +108,9 @@ Here is the documentation of options for the modules configuration:
     </tr>
 </tbody>
 </table>
+
+## Language support
+The MMM-MyPrayerTimes module support different languages. 
 
 ## License
 ### The MIT License (MIT)
