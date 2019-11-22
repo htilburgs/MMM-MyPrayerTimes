@@ -20,7 +20,7 @@ Module.register('MMM-MyPrayerTimes', {
 		showImsak: true,			// Display Imsak, false if you want to hide
 		show24Clock: true,			// Default display 24hour clock
 		maxWidth: "500px",			// Max width wrapper
-		animationSpeed: 1000, 			// fade in and out speed
+		animationSpeed: 1000, 		// fade in and out speed
 		initialLoadDelay: 1000,
 		retryDelay: 2500,
 		updateInterval: 60 * 60 * 1000
@@ -38,11 +38,13 @@ Module.register('MMM-MyPrayerTimes', {
 
 	// Define required translations.
 	getTranslations: function () {
-		// The translations for the default modules are defined in the core translation files.
-		// Therefor we can just return false. Otherwise we should have returned a dictionary.
-		// If you're trying to build your own module including translations, check out the documentation.
-		return false;
+		return {
+			en: "translations/en.json",
+			nl: "translations/nl.json",
+			tr: "translations/tr.json",
+		}
 	},
+
 	
 	convert24Time: function (time) {
 		// Check correct time format and split into components
@@ -95,7 +97,7 @@ Module.register('MMM-MyPrayerTimes', {
 
 			var ImsakTextCell = document.createElement("td");
 			ImsakTextCell.className = "imsak-text";
-			ImsakTextCell.innerHTML = "Imsak";
+			ImsakTextCell.innerHTML = this.translate("IMSAK");
 			ImsakRow.appendChild(ImsakTextCell);
 			table.appendChild(ImsakRow);
 
@@ -118,7 +120,7 @@ Module.register('MMM-MyPrayerTimes', {
 		
 		var FajrTextCell = document.createElement("td");
 		FajrTextCell.className = "fajr-text";
-		FajrTextCell.innerHTML = "Fajr";
+		FajrTextCell.innerHTML = this.translate("FAJR");
 		FajrRow.appendChild(FajrTextCell);
 		table.appendChild(FajrRow);
 		
@@ -141,7 +143,7 @@ Module.register('MMM-MyPrayerTimes', {
 
 			var SunriseTextCell = document.createElement("td");
 			SunriseTextCell.className = "sunrise-text";
-			SunriseTextCell.innerHTML = "Sunrise";
+			SunriseTextCell.innerHTML = this.translate("SUNRISE");
 			SunriseRow.appendChild(SunriseTextCell);
 			table.appendChild(SunriseRow);
 
@@ -164,7 +166,7 @@ Module.register('MMM-MyPrayerTimes', {
 		
 		var DhuhrTextCell = document.createElement("td");
 		DhuhrTextCell.className = "dhuhr-text";
-		DhuhrTextCell.innerHTML = "Dhuhr";
+		DhuhrTextCell.innerHTML = this.translate("DHUHR");
 		DhuhrRow.appendChild(DhuhrTextCell);
 		table.appendChild(DhuhrRow);
 		
@@ -186,7 +188,7 @@ Module.register('MMM-MyPrayerTimes', {
 		
 		var AsrTextCell = document.createElement("td");
 		AsrTextCell.className = "asr-text";
-		AsrTextCell.innerHTML = "Asr";
+		AsrTextCell.innerHTML = this.translate("ASR");
 		AsrRow.appendChild(AsrTextCell);
 		table.appendChild(AsrRow);
 		
@@ -209,7 +211,7 @@ Module.register('MMM-MyPrayerTimes', {
 
 			var SunsetTextCell = document.createElement("td");
 			SunsetTextCell.className = "sunset-text";
-			SunsetTextCell.innerHTML = "Sunset";
+			SunsetTextCell.innerHTML = this.translate("SUNSET");
 			SunsetRow.appendChild(SunsetTextCell);
 			table.appendChild(SunsetRow);
 
@@ -232,7 +234,7 @@ Module.register('MMM-MyPrayerTimes', {
 		
 		var MaghribTextCell = document.createElement("td");
 		MaghribTextCell.className = "maghrib-text";
-		MaghribTextCell.innerHTML = "Maghrib";
+		MaghribTextCell.innerHTML = this.translate("MAGHRIB");
 		MaghribRow.appendChild(MaghribTextCell);
 		table.appendChild(MaghribRow);
 		
@@ -254,7 +256,7 @@ Module.register('MMM-MyPrayerTimes', {
 		
 		var IshaTextCell = document.createElement("td");
 		IshaTextCell.className = "isha-text";
-		IshaTextCell.innerHTML = "Isha";
+		IshaTextCell.innerHTML = this.translate("ISHA");
 		IshaRow.appendChild(IshaTextCell);
 		table.appendChild(IshaRow);
 		
@@ -277,7 +279,7 @@ Module.register('MMM-MyPrayerTimes', {
 
 			var MidnightTextCell = document.createElement("td");
 			MidnightTextCell.className = "midnight-text";
-			MidnightTextCell.innerHTML = "Midnight";
+			MidnightTextCell.innerHTML = this.translate("MIDNIGHT");
 			MidnightRow.appendChild(MidnightTextCell);
 			table.appendChild(MidnightRow);
 
