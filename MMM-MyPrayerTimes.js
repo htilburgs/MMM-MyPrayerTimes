@@ -11,16 +11,17 @@ Module.register('MMM-MyPrayerTimes', {
 	// Default values
 	defaults: {
 		date: new Date(),			// Today
-		mptLat: null,				// = Latitude
-		mptLon: null, 				// = Longitude
-		mptMethod: null, 			// Calculation Method - Default 3: MuslimWorldLeague
+		mptLat: null,				// Replace null with your Latitude
+		mptLon: null, 				// Replace null with your Longitude
+		mptMethod: 3, 				// Calculation Method - Default 3: MuslimWorldLeague
+		mptOffset: "0,0,0,0,0,0,0,0,0", 	// Time corrections for your location: Imsak, Fajr, Sunrise, Duhr, Asr, Sunset, Maghrib, Isha, Midnight
 		showSunrise: true,			// Display Sunrise, false if you want to hide
 		showSunset: true,			// Display Sunset, false if you want to hide
 		showMidnight: true,			// Display Midnight, false if you want to hide
 		showImsak: true,			// Display Imsak, false if you want to hide
 		show24Clock: true,			// Default display 24hour clock
 		maxWidth: "500px",			// Max width wrapper
-		animationSpeed: 1000, 		// fade in and out speed
+		animationSpeed: 1000, 			// fade in and out speed
 		initialLoadDelay: 1000,
 		retryDelay: 2500,
 		updateInterval: 60 * 60 * 1000
@@ -63,7 +64,7 @@ Module.register('MMM-MyPrayerTimes', {
 		requiresVersion: "2.1.0",
 
 		// Set locales
-		this.url = "https://api.aladhan.com/v1/timings/" + this.config.date + "?latitude=" + this.config.mptLat + "&longitude=" + this.config.mptLon + "&method=" + this.config.mptMethod;
+		this.url = "https://api.aladhan.com/v1/timings/" + this.config.date + "?latitude=" + this.config.mptLat + "&longitude=" + this.config.mptLon + "&method=" + this.config.mptMethod + "&tune=" + this.config.mptOffset;
 		this.MPT = [];			// <-- empty array
 		this.scheduleUpdate();       	// <-- When the module updates (see below)
 	},
