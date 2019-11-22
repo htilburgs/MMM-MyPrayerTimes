@@ -35,14 +35,15 @@ Add the module to your modules array in your config.js.
   position: 'top_left',
   header: 'My Prayer Times',
   config: {
-          mptLat: null,			// Replace with the latitude of your location
-	  mptLon: null,			// Replace with the Longitude of your location
-	  mptMethode: 3,		// Which calculation methode is used, see options below
-	  showSunrise: true,		// Display Sunrise, false if you want to hide
-	  showSunset: true,		// Display Sunset, false if you want to hide
-	  showMidnight: true,		// Display Midnight, false if you want to hide
-	  showImsak: true,		// Display Imsak, false if you want to hide
-	  show24Clock: true,		// Default display 24hour clock -> false is 12hour (AM/PM) clock
+          mptLat: null,				// Replace with the latitude of your location
+	  mptLon: null,				// Replace with the Longitude of your location
+	  mptMethode: 3,			// Which calculation methode is used, see options below
+	  mptOffset: "0,0,0,0,0,0,0,0,0"	// Time corrections for your location: Imsak, Fajr, Sunrise, Duhr, Asr, Sunset, Maghrib, Isha, Midnight
+	  showSunrise: true,			// Display Sunrise, false if you want to hide
+	  showSunset: true,			// Display Sunset, false if you want to hide
+	  showMidnight: true,			// Display Midnight, false if you want to hide
+	  showImsak: true,			// Display Imsak, false if you want to hide
+	  show24Clock: true,			// Default display 24hour clock -> false is 12hour (AM/PM) clock
 	  }
 },
 ```
@@ -85,7 +86,11 @@ Here is the documentation of options for the modules configuration:
 	  <li>13 - Diyanet İşleri Başkanlığı, Turkey</li>
 	  <li>99 - Custom. See https://aladhan.com/calculation-methods</li>
 	</strong></td>
-	</tr>
+    </tr>
+    <tr>
+      <td><code>mptOffset</code></td>
+	<td>Posibilty for time corrections for your location <strong>(in minutes)</strong><br /><br /><strong>"Imsak, Fajr, Sunrise, Duhr, Asr, Sunset, Maghrib, Isha, Midnight"<br /></strong><br />Default: <code>"0,0,0,0,0,0,0,0,0"</code></td>
+    </tr>	
     <tr>
       <td><code>showSunrise</code></td>
       <td>Shows Sunrise in the Prayer Times<br /><br /><strong>True / False</strong><br />Default: <code>true</code></td>
