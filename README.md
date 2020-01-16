@@ -37,7 +37,7 @@ Add the module to your modules array in your config.js.
   config: {
           mptLat: null,				// Replace with the latitude of your location
 	  mptLon: null,				// Replace with the Longitude of your location
-	  mptMethode: 3,			// Which calculation methode is used, see options below
+	  mptMethod: 3,			// Which calculation methode is used, see options below
 	  mptOffset: "0,0,0,0,0,0,0,0,0"	// Time corrections for your location: Imsak, Fajr, Sunrise, Duhr, Asr, Sunset, Maghrib, Isha, Midnight
 	  showSunrise: true,			// Display Sunrise, false if you want to hide
 	  showSunset: true,			// Display Sunset, false if you want to hide
