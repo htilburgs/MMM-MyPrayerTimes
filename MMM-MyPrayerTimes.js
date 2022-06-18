@@ -269,7 +269,7 @@ Module.register('MMM-MyPrayerTimes', {
 		
 		var IshaArabCell = document.createElement("td");
 		IshaArabCell.className = "isha-arab";
-		IshaArabCell.innerHTML = "لعشاء";
+		IshaArabCell.innerHTML = "العشاء";
 		IshaRow.appendChild(IshaArabCell);
 		table.appendChild(IshaRow);
 		
