@@ -2,6 +2,10 @@
 //-------------------------------------------
 MMM-MyPrayerTimes
 Copyright (C) 2019 - H. Tilburgs
+
+v1.0 : Initial version
+v1.1 : Update request to fetch (request package has been deprecated)
+
 MIT License
 //-------------------------------------------
 */
@@ -16,17 +20,25 @@ module.exports = NodeHelper.create({
   },
 
   getMPT: function(url) {
-              request({
-              url: url,
-              method: 'GET'
-              }, (error, response, body) => {
-              if (!error && response.statusCode == 200) {
-              var result = JSON.parse(body).data.timings;          	// data.timings is from JSON data
-              console.log(response.statusCode + result);    		// uncomment to see in terminal
-              this.sendSocketNotification('MPT_RESULT', result);
-		          }
-        });
-    },
+        // Make a GET request using the Fetch API
+        fetch(url)
+        .then(response => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.json();
+    })
+
+    .then(result => {
+    // Process the retrieved user data
+    // console.log(result.data.timings); // Remove trailing slashes to display data in Console for testing
+    this.sendSocketNotification('MPT_RESULT', result.data.timings);
+    })
+
+    .catch(error => {
+      console.error('Error:', error);
+     });
+  },
 
   socketNotificationReceived: function(notification, payload) {
             if (notification === 'GET_MPT') {
