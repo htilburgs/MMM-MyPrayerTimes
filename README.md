@@ -35,9 +35,9 @@ Add the module to your modules array in your config.js.
   position: 'top_left',
   header: 'My Prayer Times',
   config: {
-          mptLat: null,				// Replace with the latitude of your location
-	  mptLon: null,				// Replace with the Longitude of your location
-	  mptMethod: 3,			// Which calculation methode is used, see options below
+          mptLat: null,				// Replace with the latitude of your location - example mptLat: 12.34567
+	  mptLon: null,				// Replace with the Longitude of your location - example mptLon: 76.54321
+	  mptMethod: 3,				// Which calculation methode is used, see options below
 	  mptOffset: "0,0,0,0,0,0,0,0,0",	// Time corrections for your location: Imsak, Fajr, Sunrise, Duhr, Asr, Sunset, Maghrib, Isha, Midnight
 	  showSunrise: true,			// Display Sunrise, false if you want to hide
 	  showSunset: true,			// Display Sunset, false if you want to hide
