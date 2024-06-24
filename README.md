@@ -117,6 +117,9 @@ Here is the documentation of options for the modules configuration:
 ## Language support
 The MMM-MyPrayerTimes module support different languages. 
 
+## Version
+v2.0 - 24-07-2024	: update node_helper.js from request (deprecated) to fetch
+
 ## License
 ### The MIT License (MIT)
 
