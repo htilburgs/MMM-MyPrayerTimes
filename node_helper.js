@@ -4,7 +4,7 @@ MMM-MyPrayerTimes
 Copyright (C) 2019 - H. Tilburgs
 
 v1.0 : Initial version
-v1.1 : Update request to fetch (request package has been deprecated)
+v2.0 : Update request to fetch (request package has been deprecated)
 
 MIT License
 //-------------------------------------------
