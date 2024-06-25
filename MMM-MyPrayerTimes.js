@@ -64,7 +64,7 @@ Module.register('MMM-MyPrayerTimes', {
 		requiresVersion: "2.1.0",
 
 		// Set locales
-		this.url = "https://api.aladhan.com/v1/timings/" + this.config.date + "?latitude=" + this.config.mptLat + "&longitude=" + this.config.mptLon + "&method=" + this.config.mptMethod + "&tune=" + this.config.mptOffset;
+		this.url = "https://api.aladhan.com/v1/timings/" + moment((this.config.date).valueOf()).format("DD-MM-YYYY") + "?latitude=" + this.config.mptLat + "&longitude=" + this.config.mptLon + "&method=" + this.config.mptMethod + "&tune=" + this.config.mptOffset;
 		this.MPT = [];			// <-- empty array
 		this.scheduleUpdate();       	// <-- When the module updates (see below)
 	},
@@ -86,7 +86,7 @@ Module.register('MMM-MyPrayerTimes', {
             	    wrapper.classList.add("bright", "light", "small");
             	    return wrapper;
         	}
-		
+		this.loaded = true;
 		var MPT = this.MPT;
 
 		// creating the tablerows
@@ -296,7 +296,8 @@ Module.register('MMM-MyPrayerTimes', {
 			MidnightRow.appendChild(MidnightArabCell);
 			table.appendChild(MidnightRow);
 		}		
-		return table;	
+		wrapper.appendChild(table)
+		return wrapper;
 			
 	}, // <-- closes the getDom function from above
 		
@@ -324,8 +325,11 @@ Module.register('MMM-MyPrayerTimes', {
 	// this gets data from node_helper
 	socketNotificationReceived: function(notification, payload) { 
 		if (notification === "MPT_RESULT") {
+				// this notification doesn't come back on error..
 		    this.processMPT(payload);
+		    this.updateDom(this.config.initialLoadDelay);  // or put in processMPT
 		}
-		this.updateDom(this.config.initialLoadDelay);
+		// do you want to do updateDom on EVER notification? or only yours
+		//this.updateDom(this.config.initialLoadDelay);
 	},
 });
