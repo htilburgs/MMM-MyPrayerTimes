@@ -17,16 +17,13 @@ module.exports = NodeHelper.create({
   start: function() {
           console.log("Starting node_helper for: " + this.name);
   },
-
-  //  don't need this anymore with async below
+  
   getMPT: function(url) {
         // Make a GET request using the Fetch API
         fetch(url)
           .then(response => {
             if (!response.ok) {
-              throw new Error('Network response was not ok');/// can't throw, no one to catch it
-              // also, user doesn't get any feedback on error.. so screen looks stuck..
-              // should send a different notification and put up an error message
+              console.error('MMM-MyPrayerTimes: Network response was not ok');
             }
             return response.json();
           })
