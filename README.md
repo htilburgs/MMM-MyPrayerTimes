@@ -24,6 +24,13 @@ git clone https://github.com/htilburgs/MMM-MyPrayerTimes
 cd MMM-MyPrayerTimes
 npm install 
 ```
+## Update
+When you need to update this module:
+
+```
+cd ~/MagicMirror/modules/MMM-MyPrayerTimes
+git pull
+```
 
 ## Configuration
 Go to the MagicMirror/config directory and edit the config.js file.
