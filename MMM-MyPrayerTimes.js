@@ -10,7 +10,6 @@ Module.register('MMM-MyPrayerTimes', {
 
 	// Default values
 	defaults: {
-		date: new Date(),			// Today
 		mptLat: null,				// Replace null with your Latitude
 		mptLon: null, 				// Replace null with your Longitude
 		mptMethod: 3, 				// Calculation Method - Default 3: MuslimWorldLeague
