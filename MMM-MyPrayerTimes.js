@@ -42,7 +42,8 @@ Module.register('MMM-MyPrayerTimes', {
 
     start: function () {
         Log.info("Starting module: " + this.name);
-        this.url = `https://api.aladhan.com/v1/timings/${moment(date.now())}?latitude=${this.config.mptLat}&longitude=${this.config.mptLon}&method=${this.config.mptMethod}&tune=${this.config.mptOffset}`;
+        //this.url = `https://api.aladhan.com/v1/timings/${moment(date.now())}?latitude=${this.config.mptLat}&longitude=${this.config.mptLon}&method=${this.config.mptMethod}&tune=${this.config.mptOffset}`;
+        this.url = "https://api.aladhan.com/v1/timings/" + date.now() + "?latitude=" + this.config.mptLat + "&longitude=" + this.config.mptLon + "&method=" + this.config.mptMethod + "&tune=" + this.config.mptOffset;
         this.MPT = {};
         this.loaded = false;
         this.scheduleUpdate();
