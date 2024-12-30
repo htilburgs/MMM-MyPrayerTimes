@@ -49,9 +49,6 @@ Module.register('MMM-MyPrayerTimes', {
     },
 
     getDom: function () {
-
-        const startDate = new Date();
-        console.log (startDate);
         
         const wrapper = document.createElement("div");
         wrapper.className = "wrapper";
