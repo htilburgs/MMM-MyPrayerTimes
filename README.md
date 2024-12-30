@@ -128,6 +128,7 @@ The MMM-MyPrayerTimes module support different languages.
 v2.0 - 24-06-2024	: update node_helper.js from request (deprecated) to fetch <br/>
 v2.1 - 30-12-2024	: minor adjustment i.e. MMM-Config (sdetweil); optimize code; fix date parameter in URL
 
+
 ## License
 ### The MIT License (MIT)
 
