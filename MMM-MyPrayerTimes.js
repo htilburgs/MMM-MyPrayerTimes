@@ -9,7 +9,7 @@ MIT License
 Module.register('MMM-MyPrayerTimes', {
     // Default values
     defaults: {
-        startDate: Date.now(),
+        startDate: new Date();,
         mptLat: null,
         mptLon: null,
         mptMethod: 3,
