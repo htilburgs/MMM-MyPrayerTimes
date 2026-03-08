@@ -1,6 +1,8 @@
 # MMM-MyPrayerTimes
 MyPrayerTimes is a simple Module, that calculates the prayer times for any location around the world, based on a variety of calculation methods currently used in Muslim communities using the Aladhan API. 
 
+![Screenshot](screenshot.png)
+
 The mathematical side of how the calculation should work is generally agreed upon in the Islamic world. Then again, this is an assumption I am making based on the number of countries that use the angle based calculation (and please note that I am not religiously or formally qualified and am providing this information with absolute humility in the hope that it may be useful). However, based on location, government preferences, and other 'factors', there are differences in the methods that produce, sometimes, a substantial variation in timings. If the mathematical side interests you, have a look at this excellent explanation: http://praytimes.org/wiki/Prayer_Times_Calculation.
 
 A calculation method is typically made up of the following:
@@ -12,8 +14,6 @@ A calculation method is typically made up of the following:
 The AlAdhan API has default values for all 3, and most methods only specifically specify Fajr and Isha.
 
 Most countries adhere to one of the above methods, and they then tune the timings further, by adding a few minutes here and there, based on criteria that may seem completely arbitrary. 
-
-![Screenshot](screenshot.png)
 
 ## Installation
 Clone this repository in your modules folder, and install dependencies:
@@ -42,16 +42,16 @@ Add the module to your modules array in your config.js.
   position: 'top_left',
   header: 'My Prayer Times',
   config: {
-          mptLat: null,				// Replace with the latitude of your location - example mptLat: 12.34567
-	  mptLon: null,				// Replace with the Longitude of your location - example mptLon: 76.54321
-	  mptMethod: 3,				// Which calculation methode is used, see options below
-	  mptOffset: "0,0,0,0,0,0,0,0,0",	// Time corrections for your location: Imsak, Fajr, Sunrise, Duhr, Asr, Sunset, Maghrib, Isha, Midnight
-	  showSunrise: true,			// Display Sunrise, false if you want to hide
-	  showSunset: true,			// Display Sunset, false if you want to hide
-	  showMidnight: true,			// Display Midnight, false if you want to hide
-	  showImsak: true,			// Display Imsak, false if you want to hide
-	  show24Clock: true,			// Default display 24hour clock -> false is 12hour (AM/PM) clock
-	  }
+		mptLat: null,					// Replace with the latitude of your location - example mptLat: 12.34567
+		mptLon: null,					// Replace with the Longitude of your location - example mptLon: 76.54321
+	  	mptMethod: 3,					// Which calculation methode is used, see options below
+	  	mptOffset: "0,0,0,0,0,0,0,0,0",	// Time corrections for your location: Imsak, Fajr, Sunrise, Duhr, Asr, Sunset, Maghrib, Isha, Midnight
+	  	showSunrise: true,				// Display Sunrise, false if you want to hide
+	  	showSunset: true,				// Display Sunset, false if you want to hide
+	  	showMidnight: true,				// Display Midnight, false if you want to hide
+	  	showImsak: true,				// Display Imsak, false if you want to hide
+	  	show24Clock: true,				// Default display 24hour clock -> false is 12hour (AM/PM) clock
+	  	}
 },
 ```
 To get your latitude and longitude, you can go to https://latitudelongitude.org
